@@ -63,7 +63,7 @@ def wishMe():
     else:
         speak("Good Evening Sir!")
 
-    speak("Jarvis Here!!How may i help you?")
+    speak("Jarvis Here , an AI Langusge Model!!How may i help you?")
 
 
     
@@ -143,13 +143,6 @@ def run_alpha():
         elif 'Search on Bard' in query or 'Write + "  "' in query:
             speak("OK...")
             webbrowser.open("https://bard.google.com/chat")
-            time.sleep(3)
-            py.write(query , interval=0.1)
-            py.keyDown('enter')
-            py.moveTo(0, 500)
-            py.keyDown('tab')
-
-
             
 
 
@@ -215,10 +208,7 @@ def run_alpha():
             ans_m = " For your information Mr.Arinjoy Acharya Created me ! I give Lot of Thannks to Him "
             print(ans_m)
             speak(ans_m)
-        elif "are you" in query or "about " in query or "Your details" or "about you" in query or "your details"in query:
-            about = "I am Jarvis an AI based computer program "
-            print(about)
-            speak(about)
+        
         elif "Hello" in query or "Hello Jarvis" in query:
             hel = "Hello Sir ! How May i Help you.."
             print(hel)
@@ -279,10 +269,10 @@ def run_alpha():
             speak("ScreenShot Saved...!")
 
         else:
-            speak('Searching Wikipedia...')
+            speak('OK!!Acessing Database...')
             query = query.replace("wikipedia", "")
             results = wikipedia.summary(query, sentences=10)
-            speak("According to Wikipedia")
+            speak("If I am not wrong,...")
             print(results)
             speak(results)
 
